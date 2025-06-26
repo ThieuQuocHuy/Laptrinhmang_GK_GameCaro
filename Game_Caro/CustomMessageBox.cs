@@ -24,7 +24,7 @@ namespace Game_Caro
             // Đặt thuộc tính ControlBox là false để ẩn các nút điều khiển cửa sổ (như nút đóng)
             ControlBox = true;
 
-            // Tạo một Label để hiển thị thông điệp
+            // Tạo 1 Label để hiển thị thông điệp
             Label label = new Label();
             label.Text = message;
             label.ForeColor = textColor;
