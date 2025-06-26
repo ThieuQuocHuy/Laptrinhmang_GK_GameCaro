@@ -32,7 +32,7 @@ namespace Game_Caro
             label.TextAlign = ContentAlignment.MiddleCenter;
             label.Font = new Font("Mulish", 18, FontStyle.Bold);
 
-            // Thêm Label vào Controls của cửa sổ
+            // Thêm Label vào Controls của cửa sổ.
             Controls.Add(label);
         }
     }
