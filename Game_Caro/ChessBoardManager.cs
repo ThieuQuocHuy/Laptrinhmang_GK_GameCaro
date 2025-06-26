@@ -296,3 +296,4 @@ namespace Game_Caro
         public Point ClickedPoint { get => clickedPoint; set => clickedPoint = value; }
     }
 }
+
