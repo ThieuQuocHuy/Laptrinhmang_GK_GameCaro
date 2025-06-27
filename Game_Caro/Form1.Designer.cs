@@ -148,7 +148,7 @@
             // 
             // tmCoolDown
             // 
-            //tmCoolDown.Tick += tmCoolDown_Tick;
+            tmCoolDown.Tick += tmCoolDown_Tick;
             // 
             // menuStrip1
             // 
@@ -177,8 +177,22 @@
             newGameToolStripMenuItem.Text = "New Game";
             newGameToolStripMenuItem.Click += newGameToolStripMenuItem_Click;
             // 
-            
-            
+            // undoToolStripMenuItem
+            // 
+            undoToolStripMenuItem.Name = "undoToolStripMenuItem";
+            undoToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Z;
+            undoToolStripMenuItem.Size = new Size(175, 22);
+            undoToolStripMenuItem.Text = "Undo";
+            undoToolStripMenuItem.Click += undoToolStripMenuItem_Click;
+            // 
+            // quitToolStripMenuItem
+            // 
+            quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            quitToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.E;
+            quitToolStripMenuItem.Size = new Size(175, 22);
+            quitToolStripMenuItem.Text = "Quit";
+            quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
+            // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.Name = "toolStripMenuItem1";
@@ -191,7 +205,13 @@
             thayToolStripMenuItem.Text = "Thay đổi hình nền";
             thayToolStripMenuItem.Click += thayToolStripMenuItem_Click;
             // 
-            
+            // thayĐổiNhạcNềnToolStripMenuItem
+            // 
+            thayĐổiNhạcNềnToolStripMenuItem.Name = "thayĐổiNhạcNềnToolStripMenuItem";
+            thayĐổiNhạcNềnToolStripMenuItem.Size = new Size(100, 22);
+            thayĐổiNhạcNềnToolStripMenuItem.Text = "Chọn nhạc nền";
+            thayĐổiNhạcNềnToolStripMenuItem.Click += nhacnen;
+            // 
             // txbPlayerName
             // 
             txbPlayerName.Location = new Point(10, 2);
