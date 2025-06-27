@@ -88,6 +88,7 @@ namespace Game_Caro
             ChessBoard.Undo();
         }
 
+
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NewGame();
@@ -100,6 +101,8 @@ namespace Game_Caro
 
             socket.Send(new SocketData((int)SocketComand.NEW_GAME, "", new Point()));
         }
+
+
 
         private void undoToolStripMenuItem_Click(object sender, EventArgs e)
         {
