@@ -143,6 +143,36 @@ namespace Game_Caro
             endedGame?.Invoke(this, new EventArgs());
         }
 
+        public bool Undo()
+        {
+            if (PlayTimeLine.Count <= 0) return false;
+            bool isUndo1 = UndoAStep();
+            bool isUndo2 = UndoAStep();
+
+            PlayInfor oldPoint = PlayTimeLine.Peek();
+            CurrentPlayer = oldPoint.Curent_Player == 1 ? 0 : 1;
+            return isUndo1 && isUndo2;
+        }
+        private bool UndoAStep()
+        {
+            if (PlayTimeLine.Count <= 0) return false;
+            PlayInfor oldPoint = PlayTimeLine.Pop();
+            Button btn = Matrix[oldPoint.Point.Y][oldPoint.Point.X];
+            btn.BackgroundImage = null;
+
+            if (PlayTimeLine.Count <= 0)
+            {
+                CurrentPlayer = 0;
+            }
+            else
+            {
+                oldPoint = PlayTimeLine.Peek();
+                //  CurrentPlayer = oldPoint.Curent_Player == 1 ? 0 : 1;
+            }
+            ChangePlayer();
+            return true;
+        }
+
         private bool isEndGame(Button btn)
         {
             return isEndHorizontal(btn) || isEndVertical(btn) || isEndPrimary(btn) || isEndSub(btn);
