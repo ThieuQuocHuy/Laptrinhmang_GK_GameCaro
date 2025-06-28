@@ -24,7 +24,7 @@ namespace Game_Caro
             // Đặt thuộc tính ControlBox là false để ẩn các nút điều khiển cửa sổ (như nút đóng)
             ControlBox = true;
 
-            // Tạo một Label để hiển thị thông điệp
+            // Tạo 1 Label để hiển thị thông điệp
             Label label = new Label();
             label.Text = message;
             label.ForeColor = textColor;
@@ -32,7 +32,7 @@ namespace Game_Caro
             label.TextAlign = ContentAlignment.MiddleCenter;
             label.Font = new Font("Mulish", 18, FontStyle.Bold);
 
-            // Thêm Label vào Controls của cửa sổ
+            // Thêm Label vào Controls của cửa sổ.
             Controls.Add(label);
         }
     }
