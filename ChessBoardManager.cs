@@ -74,8 +74,8 @@ namespace Game_Caro
 
             this.Players = new List<Player>()
             {
-                new Player("Người chơi A", Image.FromFile(Application.StartupPath + "\\Resources\\O_caro.jpg")),
-                new Player("Người chơi B", Image.FromFile(Application.StartupPath + "\\Resources\\X_caro.jpg"))
+                new Player("Người chơi A", Image.FromFile(Application.StartupPath + "\\Resources\\X_caro.jpg")),
+                new Player("Người chơi B", Image.FromFile(Application.StartupPath + "\\Resources\\O_caro.jpg"))
             };
 
         }

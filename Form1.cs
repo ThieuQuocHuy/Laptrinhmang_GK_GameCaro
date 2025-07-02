@@ -94,7 +94,7 @@ namespace Game_Caro
             lbRole.Enabled = false;
             lbRole.Text = "Host";
             lbNameXO.Text = "You are ";
-            pctbXO.Image = Image.FromFile(Application.StartupPath + "\\Resources\\X_caro.jpg");
+            pctbXO.Image = Image.FromFile(Application.StartupPath + "\\Resources\\X_click.jpg");
             pctbXO.BackgroundImageLayout = ImageLayout.Stretch;
             pnlChessBeard.Enabled = true;
 
@@ -143,7 +143,7 @@ namespace Game_Caro
                 lbRole.Enabled = false;
                 lbRole.Text = "Host";
                 lbNameXO.Text = "You are ";
-                pctbXO.Image = Image.FromFile(Application.StartupPath + "\\Resources\\X_caro.jpg");
+                pctbXO.Image = Image.FromFile(Application.StartupPath + "\\Resources\\X_click.jpg");
                 pctbXO.BackgroundImageLayout = ImageLayout.Stretch;
                 pnlChessBeard.Enabled = true;
 
@@ -157,7 +157,7 @@ namespace Game_Caro
                 lbRole.Enabled = false;
                 lbRole.Text = "Guest";
                 lbNameXO.Text = "You are ";
-                pctbXO.Image = Image.FromFile(Application.StartupPath + "\\Resources\\O_caro.jpg");
+                pctbXO.Image = Image.FromFile(Application.StartupPath + "\\Resources\\O_click.jpg");
                 pctbXO.BackgroundImageLayout = ImageLayout.Stretch;
                 //  socket.Send(new SocketData((int)SocketComand.CONNECT_SUCCESS, "", new Point()));
                 Listen();
@@ -211,7 +211,7 @@ namespace Game_Caro
                         lbRole.Enabled = false;
                         lbRole.Text = "Guest";
                         lbNameXO.Text = "You are ";
-                        pctbXO.Image = Image.FromFile(Application.StartupPath + "\\Resources\\O_caro.jpg");
+                        pctbXO.Image = Image.FromFile(Application.StartupPath + "\\Resources\\O_click.jpg");
                         pctbXO.BackgroundImageLayout = ImageLayout.Stretch;
                     }));
                     break;
@@ -233,7 +233,7 @@ namespace Game_Caro
                     prcbCoolDown.Value = 0;
                     if (!socket.isServer) // Chỉ hiện thông báo chiến thắng cho người không phải host
                     {
-                        CustomMessageBox message = new CustomMessageBox("Bạn đã trở thành đom đóm!", Color.Blue);
+                        CustomMessageBox message = new CustomMessageBox("Bạn đã chiến thắng!", Color.Blue);
                         message.ShowDialog();
                     }
                     
@@ -242,7 +242,7 @@ namespace Game_Caro
                     prcbCoolDown.Value = 0;
                     if (socket.isServer) // Thông báo thắng cho Host
                     {
-                        CustomMessageBox message = new CustomMessageBox("Bạn đã trở thành đom đóm!", Color.Blue);
+                        CustomMessageBox message = new CustomMessageBox("Bạn đã chiến thắng!", Color.Blue);
                         message.ShowDialog();
                     }
 
